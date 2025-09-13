@@ -1,0 +1,274 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  background-color: #fbf1f1;
+  color: #000;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  width: 100%;
+  background: linear-gradient(90deg, #6a35f1, #32bdcf);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar h1 {
+  font-size: 30px;
+  color: white;
+}
+
+.navbar .links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.navbar .links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: yellow;
+}
+
+/* Home / Content Section */
+.content {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 25px;
+}
+
+/* Blog List / Preview */
+.blog-preview {
+  padding: 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #529ea2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.blog-preview:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-preview h2 {
+  font-size: 22px;
+  color: #6a35f1;
+  margin-bottom: 8px;
+}
+
+.blog-preview p {
+  font-size: 16px;
+  color: #333;
+}
+
+.blog-preview p:hover {
+  color: #f91c1c;
+}
+
+/* Blog Buttons */
+.blog-preview button {
+  color: #fff;
+  background-color: #32bdcf;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.blog-preview button:hover {
+  background-color: #f70707;
+  color: #fff;
+}
+
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .links {
+    margin-top: 10px;
+  }
+  .navbar .links a {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
+.blog-list a{
+  text-decoration:none;
+}
+
+
+/* selected blog */
+article {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-wrap: break-word; 
+  word-break: break-word;    
+}
+
+article h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+article p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0.25rem 0;
+}
+
+article .createdat {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 1rem;
+}
+
+article div {
+  margin-top: 1.5rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #444;
+  white-space: pre-wrap; 
+}
+
+article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.create {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.create h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+  text-align: center;
+}
+
+.create form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.create label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.create input,
+.create textarea {
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #f9fafb;
+  outline: none;
+  transition: border 0.2s ease, background 0.2s ease;
+}
+
+.create input:focus,
+.create textarea:focus {
+  border-color: #6366f1; /* indigo */
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.create textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.create button {
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: #6366f1; /* indigo */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.create button:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+}
+
+.create button:active {
+  background: #4338ca;
+  transform: translateY(0);
+}
+.blog-detail .edit {
+  margin-top: 30px;
+  
+}
+
+.blog-detail .edit button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1rem;
+  background-color: #000000;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+.blog-detail .edit button:hover {
+  background-color: #e60000;
+}
+.blog-detail .edit a {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1rem;
+  background-color: #000000;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+
+}
